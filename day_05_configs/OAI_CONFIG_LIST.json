@@ -1,0 +1,12 @@
+[
+    {
+        "model": "gpt-4",
+        "api_key": "GPT-4 API KEY",
+        "base_url": "https://api.gpt4.com"
+    },
+    {
+        "model": "gpt-3.5-turbo",
+        "api_key": "GPT-3.5 API KEY",
+        "base_url": "https://api.someotherapi.com"
+    }
+]

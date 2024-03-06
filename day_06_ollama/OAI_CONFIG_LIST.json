@@ -1,0 +1,7 @@
+[
+    {
+        "model": "deepseek-coder:33b",
+        "api_key": "sk-12345",
+        "base_url": "http://localhost:11431/v1"
+    }
+]
