@@ -1,0 +1,128 @@
+{
+  "description": "Workflow for Python",
+  "id": "3cf553f1-1ad5-4dae-a5fd-b4f864d4fde8",
+  "name": "Python Workflow",
+  "receiver": {
+    "type": "groupchat",
+    "config": {
+      "name": "groupchat_assistant",
+      "llm_config": {
+        "config_list": [
+          {
+            "model": "gpt-4-1106-preview"
+          }
+        ],
+        "temperature": 0.5,
+        "cache_seed": null,
+        "timeout": 600
+      },
+      "human_input_mode": "NEVER",
+      "max_consecutive_auto_reply": 5,
+      "system_message": "You are a helpful assistant skilled at coordinating a group of other assistants to solve a task. ",
+      "is_termination_msg": null,
+      "code_execution_config": false,
+      "default_auto_reply": ""
+    },
+    "groupchat_config": {
+      "agents": [
+        {
+          "type": "assistant",
+          "config": {
+            "name": "primary_assistant",
+            "llm_config": {
+              "config_list": [
+                {
+                  "model": "gpt-4-1106-preview"
+                }
+              ],
+              "temperature": 0.1,
+              "cache_seed": null,
+              "timeout": 600
+            },
+            "human_input_mode": "NEVER",
+            "max_consecutive_auto_reply": 8,
+            "system_message": "You are a helpful AI assistant. Solve tasks using your coding and language skills. In the following cases, suggest python code (in a python coding block) or shell script (in a sh coding block) for the user to execute. 1. When you need to collect info, use the code to output the info you need, for example, browse or search the web, download/read a file, print the content of a webpage or a file, get the current date/time, check the operating system. After sufficient info is printed and the task is ready to be solved based on your language skill, you can solve the task by yourself. 2. When you need to perform some task with code, use the code to perform the task and output the result. Finish the task smartly. Solve the task step by step if you need to. If a plan is not provided, explain your plan first. Be clear which step uses code, and which step uses your language skill. When using code, you must indicate the script type in the code block. The user cannot provide any other feedback or perform any other action beyond executing the code you suggest. The user can't modify your code. So do not suggest incomplete code which requires users to modify. Don't use a code block if it's not intended to be executed by the user. If you want the user to save the code in a file before executing it, put # filename: <filename> inside the code block as the first line. Don't include multiple code blocks in one response. Do not ask users to copy and paste the result. Instead, use 'print' function for the output when relevant. Check the execution result returned by the user. If the result indicates there is an error, fix the error and output the code again. Suggest the full code instead of partial code or code changes. If the error can't be fixed or if the task is not solved even after the code is executed successfully, analyze the problem, revisit your assumption, collect additional info you need, and think of a different approach to try. When you find an answer, verify the answer carefully. Include verifiable evidence in your response if possible. Reply 'TERMINATE' in the end when everything is done.",
+            "is_termination_msg": null,
+            "code_execution_config": false,
+            "default_auto_reply": ""
+          },
+          "id": "c72a0302-5979-407d-a09b-8b2e2d3cb9d7",
+          "timestamp": "2024-02-19T13:39:34.535024",
+          "user_id": "default",
+          "skills": null,
+          "description": null
+        },
+        {
+          "type": "assistant",
+          "config": {
+            "name": "python_assistant",
+            "llm_config": {
+              "config_list": [
+                {
+                  "id": "5ee513a8-c7f1-4309-8dbd-ab2badec67e8",
+                  "user_id": "guestuser@gmail.com",
+                  "timestamp": "2024-02-19T13:36:13.305580",
+                  "model": "gpt-3.5-turbo",
+                  "api_key": null,
+                  "base_url": null,
+                  "api_type": null,
+                  "api_version": null,
+                  "description": "Sample OpenAI GPT-4 model"
+                }
+              ],
+              "temperature": 0.1,
+              "cache_seed": null,
+              "timeout": null
+            },
+            "human_input_mode": "NEVER",
+            "max_consecutive_auto_reply": 5,
+            "system_message": "You are a helpful AI assistant. Solve tasks using your coding and language skills. In the following cases, suggest python code (in a python coding block) or shell script (in a sh coding block) for the user to execute. 1. When you need to collect info, use the code to output the info you need, for example, browse or search the web, download/read a file, print the content of a webpage or a file, get the current date/time, check the operating system. After sufficient info is printed and the task is ready to be solved based on your language skill, you can solve the task by yourself. 2. When you need to perform some task with code, use the code to perform the task and output the result. Finish the task smartly. Solve the task step by step if you need to. If a plan is not provided, explain your plan first. Be clear which step uses code, and which step uses your language skill. When using code, you must indicate the script type in the code block. The user cannot provide any other feedback or perform any other action beyond executing the code you suggest. The user can't modify your code. So do not suggest incomplete code which requires users to modify. Don't use a code block if it's not intended to be executed by the user. If you want the user to save the code in a file before executing it, put # filename: <filename> inside the code block as the first line. Don't include multiple code blocks in one response. Do not ask users to copy and paste the result. Instead, use 'print' function for the output when relevant. Check the execution result returned by the user. If the result indicates there is an error, fix the error and output the code again. Suggest the full code instead of partial code or code changes. If the error can't be fixed or if the task is not solved even after the code is executed successfully, analyze the problem, revisit your assumption, collect additional info you need, and think of a different approach to try. When you find an answer, verify the answer carefully. Include verifiable evidence in your response if possible. Reply 'TERMINATE' in the end when everything is done.",
+            "is_termination_msg": null,
+            "code_execution_config": false,
+            "default_auto_reply": "..."
+          },
+          "id": "1ff25acf-1e17-4999-9805-3d837e974530",
+          "timestamp": "2024-02-19T13:35:21.187614",
+          "user_id": "guestuser@gmail.com",
+          "skills": [],
+          "description": "Python Assistant"
+        }
+      ],
+      "admin_name": "groupchat_assistant",
+      "messages": [],
+      "max_round": 10,
+      "speaker_selection_method": "auto",
+      "allow_repeat_speaker": false
+    },
+    "id": "76dc602d-02b7-49de-a698-82ec05e77a14",
+    "timestamp": "2024-02-19T13:39:34.535472",
+    "user_id": "default",
+    "description": "Default Group  Workflow",
+    "skills": null
+  },
+  "sender": {
+    "type": "userproxy",
+    "config": {
+      "name": "userproxy",
+      "llm_config": false,
+      "human_input_mode": "NEVER",
+      "max_consecutive_auto_reply": 5,
+      "system_message": "You are a helpful assistant.",
+      "is_termination_msg": null,
+      "code_execution_config": {
+        "work_dir": null,
+        "use_docker": false
+      },
+      "default_auto_reply": "TERMINATE"
+    },
+    "id": "37f95841-e3a9-48a1-a8c0-34bc8c0552d4",
+    "timestamp": "2024-02-19T13:39:34.532046",
+    "user_id": "default",
+    "skills": null,
+    "description": null
+  },
+  "summary_method": "last",
+  "timestamp": "2024-02-19T13:39:34.537225",
+  "type": "groupchat",
+  "user_id": "default"
+}
