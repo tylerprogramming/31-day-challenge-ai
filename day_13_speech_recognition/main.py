@@ -4,7 +4,7 @@ from typing import Annotated
 import json
 
 API_URL = "https://api-inference.huggingface.co/models/openai/whisper-large-v3"
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": "Bearer your_token"}
 
 llm_config = {
     "config_list": autogen.config_list_from_json(
