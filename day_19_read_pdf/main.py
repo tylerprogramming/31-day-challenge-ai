@@ -19,7 +19,7 @@ if __name__ == "__main__":
     embeddings = OpenAIEmbeddings()
 
     if not os.path.exists(folder_path):
-        pdf_path = "/Users/tylerreed/PycharmProjects/31day-ai-challenge/day_18_read_pdf/ancient_rome.pdf"
+        pdf_path = "/day_19_read_pdf/ancient_rome.pdf"
         loader = PyMuPDFLoader(file_path=pdf_path)
         documents = loader.load()
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=30)
