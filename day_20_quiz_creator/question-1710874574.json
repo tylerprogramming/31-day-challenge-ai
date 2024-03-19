@@ -1,0 +1,12 @@
+{
+  "question": "Which of the following is NOT one of the continents where the Roman Empire ruled?",
+  "choices": {
+    "A": "North America",
+    "B": "Europe",
+    "C": "Asia",
+    "D": "Africa"
+  },
+  "correct_answer": "A",
+  "reason": "The passage states that the Roman Empire ruled on three continents: Europe, Asia, and Africa. North America is not mentioned as one of the continents.",
+  "page": 50
+}

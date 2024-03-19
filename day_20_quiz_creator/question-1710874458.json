@@ -1,0 +1,12 @@
+{
+  "question": "Which of the following continents did the Roman Empire rule over?",
+  "choices": {
+    "A": "North America",
+    "B": "South America",
+    "C": "Europe",
+    "D": "Australia"
+  },
+  "correct_answer": "C",
+  "reason": "The context states that the Roman Empire ruled over lands on three continents: Europe, Asia, and Africa.",
+  "page_found_on": 50
+}
