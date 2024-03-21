@@ -35,4 +35,4 @@ math_proxy_agent = MathUserProxyAgent(
 # )
 
 math_problem = "Problem: If $725x + 727y = 1500$ and $729x+ 731y = 1508$, what is the value of $x - y$ ?"
-math_proxy_agent.initiate_chat(assistant, problem=math_problem)
+math_proxy_agent.initiate_chat(assistant, message=math_proxy_agent.message_generator,  problem=math_problem)
