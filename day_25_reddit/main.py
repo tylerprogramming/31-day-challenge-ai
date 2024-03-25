@@ -3,8 +3,8 @@ import autogen
 
 # https://www.reddit.com/prefs/apps/
 loader = RedditPostsLoader(
-    client_id="TmUF0fQR_Ym0ZpNPDz4mCw",
-    client_secret="6eR9vrrHUc0GDPMFPEgFawAyjrq6ew",
+    client_id="id",
+    client_secret="secret",
     user_agent="extractor by u/tyler_programming",
     categories=["new"],  # Note: Categories can be only of following value - "controversial" "hot" "new" "rising" "top"
     mode="subreddit",
