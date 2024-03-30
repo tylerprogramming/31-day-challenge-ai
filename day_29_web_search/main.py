@@ -27,35 +27,25 @@ web_surfer = WebSurferAgent(
 
 user_proxy = autogen.UserProxyAgent(
     "user_proxy",
-    human_input_mode="ALWAYS",
+    human_input_mode="NEVER",
     code_execution_config=False,
     default_auto_reply="",
     is_termination_msg=lambda x: True,
 )
 
-task1 = """
-Search on Amazon home page.
-"""
-# task2 = """
-# Now go to the next page, and get the results."
+# task1 = """
+# Search the web for information about Microsoft AutoGen
 # """
-# task3 = """
-# Now go to the next page, and get the results."
-# """
-# task4 = """
-#     Now Click on large
-# """
-user_proxy.initiate_chat(web_surfer, message=task1)
+# user_proxy.initiate_chat(web_surfer, message=task1)
+# task2 = "Summarize these results"
 # user_proxy.initiate_chat(web_surfer, message=task2, clear_history=False)
-# # task3 = "Click the 'Getting Started' result"
+# task3 = "Click the 'Getting Started' result"
 # user_proxy.initiate_chat(web_surfer, message=task3, clear_history=False)
 
-# user_proxy.initiate_chat(web_surfer, message=task4, clear_history=False)
-# ---
 
-# task4 = """Find Microsoft's Wikipedia page."""
-# user_proxy.initiate_chat(web_surfer, message=task4, clear_history=False)
-# task5 = """Scroll down."""
-# user_proxy.initiate_chat(web_surfer, message=task5, clear_history=False)
-# task6 = """Where was the first office location, and when did they move to Redmond?"""
-# user_proxy.initiate_chat(web_surfer, message=task6, clear_history=False)
+task4 = """Find Microsoft's Wikipedia page."""
+user_proxy.initiate_chat(web_surfer, message=task4, clear_history=False)
+task5 = """Scroll down."""
+user_proxy.initiate_chat(web_surfer, message=task5, clear_history=False)
+task6 = """Where is there total revenue?"""
+user_proxy.initiate_chat(web_surfer, message=task6, clear_history=False)

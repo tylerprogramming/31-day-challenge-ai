@@ -1,0 +1,11 @@
+[
+    {
+        "model": "microsoft/phi-2",
+        "model_client_cls": "CustomModelClient",
+        "device": "cpu",
+        "n": 1,
+        "params": {
+            "max_length": 1000
+        }
+    }
+]
