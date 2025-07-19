@@ -18,7 +18,7 @@ numpy==1.26.4
 openai==1.13.3
 packaging==23.2
 pillow==10.2.0
-pyautogen==0.2.15
+ag2==0.2.15
 pydantic==2.6.3
 pydantic_core==2.16.3
 python-dotenv==1.0.1
