@@ -44,7 +44,9 @@ def ingest_docs(question) -> str:
         vectorstore.save_local(index_name)
 
     embeddings = OpenAIEmbeddings()
-    my_vectorstore = FAISS.load_local(index_name, embeddings)
+    # The index is a pickle. This one is either the copy shipped in this repo or one
+    # ingest_docs() just built; only load indexes you created or trust.
+    my_vectorstore = FAISS.load_local(index_name, embeddings, allow_dangerous_deserialization=True)
     qa = RetrievalQA.from_chain_type(llm=ChatOpenAI(model="gpt-4"), retriever=my_vectorstore.as_retriever(),
                                      chain_type="stuff")
     response = qa.invoke({"query": question})
