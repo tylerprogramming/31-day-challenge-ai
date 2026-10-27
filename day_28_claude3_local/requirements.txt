@@ -1,0 +1,7 @@
+# Same AutoGen 0.2 version the other March 2024 days pin (Python 3.11 or 3.12).
+pyautogen==0.2.19
+openai==1.13.3
+httpx==0.27.0
+numpy==1.26.4
+# claude.py calls the Anthropic Messages API directly (same version day_23 pins)
+anthropic==0.21.3
