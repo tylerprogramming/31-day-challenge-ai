@@ -18,6 +18,10 @@ python main.py
 
 Use Python 3.11 or 3.12. The pinned `pyautogen` 0.2 releases require Python below 3.13, and pins such as `numpy==1.26.4` and `torch==2.2.1` publish wheels only up to 3.12.
 
+Days that pin `chromadb==0.4.24` need Python 3.11, because its `chroma-hnswlib==0.7.3` dependency has no Python 3.12 wheel. On 3.12, pip tries to compile it and needs a C++ compiler. Those days are 15, 16, 18, 19, 20, 23, 24, 25 and 30.
+
+`day_17` has no code. It only links the AutoGen video it reacts to.
+
 Days that call OpenAI read the key from an `OAI_CONFIG_LIST.json` (or `.env`) in that folder. Replace the placeholder `api_key` with your own key; never commit a real one.
 
 ## Models used in this repo were retired
