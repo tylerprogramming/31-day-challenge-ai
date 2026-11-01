@@ -43,6 +43,16 @@ To run an affected day:
 2. Delete `"temperature"` and `"max_tokens"` from the `llm_config` (and `temperature=` from LangChain `ChatOpenAI(...)` calls). GPT-5 models only accept the default temperature, and use `max_completion_tokens` instead of `max_tokens`.
 3. Expect a cost-calculation warning from `pyautogen` 0.2: its price table predates these models. The chat still runs.
 
+Days 19 and 20 also build LangChain's `OpenAI()` class with no model name. That class calls the legacy Completions endpoint and defaults to `gpt-3.5-turbo-instruct`, which OpenAI shut down on 2026-09-28. The suggested substitutes (`gpt-5.6-terra`, `gpt-5.4-mini`) do not support that endpoint, so changing a model name is not enough there (and `os.environ["model"]` in day 19 is never read). Replace the import and the call:
+
+```python
+from langchain_openai import ChatOpenAI
+
+llm = ChatOpenAI(model="gpt-5.4-mini", temperature=1)  # instead of OpenAI(...)
+```
+
+`RetrievalQA` (day 19) and `ConversationalRetrievalChain` (day 20) accept a chat model unchanged. Day 30 uses the same `OpenAI()` class but points it at a local LM Studio server through `BASE_URL`, so it is not affected.
+
 Days that reference a retired model: 01, 02, 03, 05, 08, 09, 10, 11, 13, 16, 18, 19, 20, 21, 22, 23, 24, 25, 28 and 29 (web search). Days 04, 06 and 27 run local models through LM Studio or Ollama and are not affected.
 
 For current, maintained AutoGen code (AutoGen 0.7 API), see [tylerprogramming/ai](https://github.com/tylerprogramming/ai/tree/main/frameworks/autogen).
