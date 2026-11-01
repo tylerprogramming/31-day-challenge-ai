@@ -40,7 +40,7 @@ These models have been shut down. The substitutes are the ones listed on the [Op
 To run an affected day:
 
 1. Change the model name everywhere that day sets it: `"model"` in `OAI_CONFIG_LIST.json`, `MODEL=` in `.env`, and any `filter_dict`, `model=` or `os.environ["model"]` in its `.py` files (search the folder for `gpt-`).
-2. Delete `"temperature"` and `"max_tokens"` from the `llm_config` (and `temperature=` from LangChain `ChatOpenAI(...)` calls). GPT-5 models only accept the default temperature, and use `max_completion_tokens` instead of `max_tokens`.
+2. Delete `"temperature"` and `"max_tokens"` from the `llm_config`. GPT-5 models only accept the default temperature, and use `max_completion_tokens` instead of `max_tokens`. For LangChain `ChatOpenAI(...)` calls (days 09 and 24), set `temperature=1` instead of deleting it: the pinned `langchain-openai==0.0.8` sends `temperature=0.7` whenever you leave it out.
 3. Expect a cost-calculation warning from `pyautogen` 0.2: its price table predates these models. The chat still runs.
 
 Days 19 and 20 also build LangChain's `OpenAI()` class with no model name. That class calls the legacy Completions endpoint and defaults to `gpt-3.5-turbo-instruct`, which OpenAI shut down on 2026-09-28. The suggested substitutes (`gpt-5.6-terra`, `gpt-5.4-mini`) do not support that endpoint, so changing a model name is not enough there (and `os.environ["model"]` in day 19 is never read). Replace the import and the call:
