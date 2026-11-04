@@ -53,6 +53,17 @@ llm = ChatOpenAI(model="gpt-5.4-mini", temperature=1)  # instead of OpenAI(...)
 
 `RetrievalQA` (day 19) and `ConversationalRetrievalChain` (day 20) accept a chat model unchanged. Day 30 uses the same `OpenAI()` class but points it at a local LM Studio server through `BASE_URL`, so it is not affected.
 
+Day 28 (`claude.py`) calls the Anthropic Messages API directly, so the GPT steps above do not cover it. Two changes are needed besides the model name:
+
+1. Delete `temperature=0.0` from `client.messages.create(...)`. `claude-sonnet-5-5` returns a 400 error when a request sets `temperature`, `top_p` or `top_k` ([model page](https://platform.claude.com/docs/en/models/sonnet-5-5/overview)).
+2. Print only the text blocks. Adaptive thinking is on by default on this model, so `message.content[0]` can be a `thinking` block with no text. Replace the last `print` with:
+
+```python
+print("".join(block.text for block in message.content if block.type == "text"))
+```
+
+Thinking tokens count toward `max_tokens`, so keep `max_tokens=4096` or raise it. `main.py` talks to Claude through a LiteLLM proxy at `0.0.0.0:4000`, so change the model in the proxy's config as well. The `zephyr` config in `claude.py` points at LM Studio on `localhost:1234` and only borrows the Claude name; it is not affected.
+
 Days that reference a retired model: 01, 02, 03, 05, 08, 09, 10, 11, 13, 16, 18, 19, 20, 21, 22, 23, 24, 25, 28 and 29 (web search). Days 04, 06 and 27 run local models through LM Studio or Ollama and are not affected.
 
 For current, maintained AutoGen code (AutoGen 0.7 API), see [tylerprogramming/ai](https://github.com/tylerprogramming/ai/tree/main/frameworks/autogen).
