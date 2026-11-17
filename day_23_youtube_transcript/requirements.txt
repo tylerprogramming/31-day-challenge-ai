@@ -19,7 +19,7 @@ blinker==1.7.0
 Brotli==1.1.0
 build==1.1.1
 cachetools==5.3.3
-certifi==2024.2.2
+certifi==2026.10.23
 cffi==1.16.0
 chardet==3.0.4
 charset-normalizer==3.3.2
