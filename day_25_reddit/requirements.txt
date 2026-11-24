@@ -158,7 +158,7 @@ pydeck==0.8.1b0
 pydub==0.25.1
 pygame==2.5.2
 Pygments==2.17.2
-PyJWT==2.8.0
+PyJWT==2.15.1
 PyMuPDF==1.23.26
 PyMuPDFb==1.23.22
 pyparsing==3.1.2
