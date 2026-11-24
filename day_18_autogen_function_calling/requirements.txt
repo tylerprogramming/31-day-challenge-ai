@@ -6,7 +6,7 @@ annotated==0.0.2
 annotated-types==0.6.0
 anyio==4.14.2
 appdirs==1.4.4
-asgiref==3.7.2
+asgiref==3.8.1
 attrs==23.2.0
 audioread==3.0.1
 backoff==2.2.1
@@ -30,7 +30,7 @@ Deprecated==1.2.14
 diffusers==0.26.3
 diskcache==5.6.3
 distro==1.9.0
-Django==5.0.3
+Django==5.2.19
 docker==7.0.0
 faiss-cpu==1.8.0
 fastapi==0.110.0
