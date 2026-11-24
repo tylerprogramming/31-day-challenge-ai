@@ -1,7 +1,7 @@
 accelerate==0.27.2
 aiohappyeyeballs==2.7.1
 aiohttp==3.9.3
-aiosignal==1.3.1
+aiosignal==1.4.0
 altair==5.2.0
 annotated==0.0.2
 annotated-types==0.6.0
@@ -214,7 +214,7 @@ websocket-client==1.7.0
 websockets==12.0
 wikipedia==1.4.0
 wrapt==1.16.0
-yarl==1.9.4
+yarl==1.25.1
 yfinance==0.2.37
 youtube-transcript-api==0.6.2
 yt-dlp==2024.3.10
