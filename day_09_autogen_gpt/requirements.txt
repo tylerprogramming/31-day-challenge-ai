@@ -15,7 +15,7 @@ faiss-cpu==1.8.0
 filelock==3.13.1
 FLAML==2.1.1
 fsspec==2024.2.0
-GitPython==3.1.42
+GitPython==3.2.1
 googletrans==4.0.0rc1
 h11==0.16.0
 h2==3.2.0
