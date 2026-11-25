@@ -49,5 +49,5 @@ torch==2.2.1
 tqdm==4.66.2
 transformers==4.38.2
 typing_extensions==4.10.0
-urllib3==2.2.1
+urllib3==2.8.0
 zipp==3.17.0
