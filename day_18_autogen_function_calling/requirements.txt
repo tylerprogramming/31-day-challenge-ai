@@ -208,5 +208,5 @@ wrapt==1.16.0
 yarl==1.25.1
 yfinance==0.2.37
 youtube-transcript-api==0.6.2
-yt-dlp==2024.3.10
+yt-dlp==2026.11.23
 zipp==3.17.0
