@@ -62,7 +62,7 @@ googleapis-common-protos==1.63.0
 googletrans==4.0.0rc1
 greenlet==3.0.3
 grpcio==1.62.1
-gunicorn==21.2.0
+gunicorn==27.0.1
 h11==0.16.0
 h2==3.2.0
 hpack==3.0.0
