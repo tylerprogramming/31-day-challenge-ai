@@ -38,7 +38,7 @@ diffusers==0.26.3
 diskcache==5.6.3
 distro==1.9.0
 Django==5.2.19
-dnspython==2.6.1
+dnspython==2.9.2
 docker==7.0.0
 email_validator==2.1.1
 faiss-cpu==1.8.0
