@@ -22,14 +22,14 @@ Brotli==1.2.1
 build==1.1.1
 cachetools==5.3.3
 certifi==2026.10.23
-cffi==1.16.0
+cffi==2.1.1
 chardet==3.0.4
 charset-normalizer==3.3.2
 chroma-hnswlib==0.7.3
 chromadb==0.4.24
 click==8.1.7
 coloredlogs==15.0.1
-cryptography==41.0.3
+cryptography==50.0.2
 dataclasses-json==0.6.4
 decorator==4.4.2
 defusedxml==0.7.1
@@ -38,7 +38,7 @@ diffusers==0.26.3
 diskcache==5.6.3
 distro==1.9.0
 Django==5.2.19
-dnspython==2.6.1
+dnspython==2.9.2
 docker==7.0.0
 email_validator==2.1.1
 faiss-cpu==1.8.0
@@ -62,7 +62,7 @@ googleapis-common-protos==1.63.0
 googletrans==4.0.0rc1
 greenlet==3.0.3
 grpcio==1.62.1
-gunicorn==21.2.0
+gunicorn==27.0.1
 h11==0.16.0
 h2==3.2.0
 hpack==3.0.0
@@ -168,7 +168,7 @@ PyPika==0.48.9
 pyproject_hooks==1.0.0
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
-python-multipart==0.0.6
+python-multipart==0.0.34
 pytz==2024.1
 PyYAML==6.0.1
 redis==5.0.3
