@@ -109,8 +109,8 @@ protobuf==4.25.3
 psutil==5.9.8
 pulsar-client==3.4.0
 pyarrow==15.0.1
-pyasn1==0.5.1
-pyasn1-modules==0.3.0
+pyasn1==0.6.5
+pyasn1-modules==0.4.2
 pyautogen==0.2.15
 pydantic==2.6.3
 pydantic_core==2.16.3
