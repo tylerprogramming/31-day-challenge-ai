@@ -104,7 +104,7 @@ mmh3==4.1.0
 monotonic==1.6
 moviepy==1.0.3
 mpmath==1.3.0
-msgpack==1.0.8
+msgpack==1.2.4
 multidict==6.0.5
 multitasking==0.0.11
 mutagen==1.47.0
