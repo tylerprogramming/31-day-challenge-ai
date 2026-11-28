@@ -99,7 +99,7 @@ langsmith==0.1.24
 lazy_loader==0.3
 librosa==0.10.1
 llvmlite==0.42.0
-lxml==5.1.0
+lxml==6.2.0
 Markdown==3.6
 markdown-it-py==3.0.0
 markdownify==0.11.6
