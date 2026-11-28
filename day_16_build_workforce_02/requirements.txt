@@ -96,7 +96,7 @@ opentelemetry-proto==1.23.0
 opentelemetry-sdk==1.23.0
 opentelemetry-semantic-conventions==0.44b0
 opentelemetry-util-http==0.44b0
-orjson==3.9.15
+orjson==3.11.6
 overrides==7.7.0
 packaging==23.2
 pandas==2.2.1
@@ -109,8 +109,8 @@ protobuf==4.25.3
 psutil==5.9.8
 pulsar-client==3.4.0
 pyarrow==15.0.1
-pyasn1==0.5.1
-pyasn1-modules==0.3.0
+pyasn1==0.6.5
+pyasn1-modules==0.4.2
 pyautogen==0.2.15
 pydantic==2.6.3
 pydantic_core==2.16.3
